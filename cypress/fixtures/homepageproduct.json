@@ -1,0 +1,17 @@
+[
+{   
+    "Login": "Yes",
+    "ProductName1":"Nike air zoom pegasus 35",
+    "ProductName2":"Geography class chuck taylor all star",
+    "Username":"Niken6@test.com",
+    "Password":"Password1"
+},
+{
+    "Login": "No",
+    "ProductName1":"Nike air zoom pegasus 35",
+    "ProductName2":"Geography class chuck taylor all star",
+    "Username":"Niken6@test.com",
+    "Password":""
+
+}
+]
