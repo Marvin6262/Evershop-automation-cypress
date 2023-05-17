@@ -1,16 +1,20 @@
-describe('Signup Page', () => {
+import { getRandomEmail } from "../utils/faker";
 
-    it('Signup', () => {
+describe('Signup Page', () => {
+    
+    //Signup With Faker
+    it('Signup', () => {    
+        const email = getRandomEmail()
         cy.viewport(1200, 800);
         cy.visit('https://demo.evershop.io/')
         cy.get('a[href="/account/login"] svg').click();
         cy.contains('a', 'Create an account').click();
         cy.get('input[placeholder="Full Name"]').type('Niken');
-        cy.get('input[placeholder="Email"]').type('Niken6@test.com');
+        cy.get('input[placeholder="Email"]').type(email);
         cy.get('input[placeholder="Password"]').type('Password1');
         cy.contains('span', 'SIGN UP').click();
         cy.get('a[href="/account"] svg').click();
-        cy.contains('Niken6@test.com').should('exist');
+        cy.contains(email).should('exist');
     });
 
     it('Sign Up With Exist Email', () => {
